@@ -1,0 +1,43 @@
+/* Styles spécifiques à la page d'accueil */
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.badge-primary {
+    font-size: 1.1rem;
+    padding: 8px 18px;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.alert i, .section-title i {
+    margin-right: 10px;
+}
+
+.tm-nav-link i {
+    transition: transform 0.3s ease;
+}
+
+.tm-nav-link:hover i {
+    transform: translateX(3px);
+}
+
+.service-card i {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
+}
+
+footer p i {
+    width: 25px;
+    text-align: center;
+}

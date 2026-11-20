@@ -1,0 +1,415 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Open Sans', sans-serif;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animation de fond */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        /* Conteneur principal */
+        .error-container {
+            max-width: 700px;
+            width: 100%;
+            animation: slideInUp 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Carte principale */
+        .error-card {
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .error-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* En-tête */
+        .error-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 35px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+            background-size: 30px 30px;
+            animation: rotateBg 20s linear infinite;
+        }
+
+        @keyframes rotateBg {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-icon {
+            font-size: 70px;
+            color: white;
+            margin-bottom: 20px;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px);
+            }
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        .error-header h2 {
+            color: white;
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-header p {
+            color: rgba(255,255,255,0.95);
+            margin: 12px 0 0 0;
+            font-size: 15px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Corps de la carte */
+        .error-body {
+            padding: 35px;
+            background: white;
+        }
+
+        /* Message d'erreur */
+        .error-message {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%);
+            border-left: 5px solid #f5576c;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .error-message:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .error-message i {
+            color: #f5576c;
+            font-size: 28px;
+            margin-right: 15px;
+            float: left;
+        }
+
+        .error-message strong {
+            color: #c82333;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .error-message-text {
+            font-size: 15px;
+            color: #721c24;
+            line-height: 1.6;
+            margin-left: 43px;
+        }
+
+        /* Carte des données saisies */
+        .data-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .data-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .data-header {
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .data-header h6 {
+            color: #667eea;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .data-header i {
+            color: #667eea;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .data-item {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .data-item:hover {
+            transform: translateX(5px);
+            border-color: #667eea;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .data-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .data-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            word-break: break-all;
+        }
+
+        .data-value i {
+            color: #28a745;
+            font-size: 14px;
+        }
+
+        /* Suggestions */
+        .suggestions-card {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #ffc107;
+        }
+
+        .suggestions-card i {
+            color: #ffc107;
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .suggestions-card h6 {
+            color: #856404;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .suggestions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .suggestions-list li {
+            padding: 8px 0;
+            color: #856404;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+        }
+
+        .suggestions-list li i {
+            font-size: 12px;
+            margin-right: 10px;
+            margin-bottom: 0;
+            color: #ffc107;
+        }
+
+        /* Boutons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn-custom {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-outline-custom {
+            background: white;
+            border: 2px solid #dee2e6;
+            color: #666;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: #667eea;
+            color: #667eea;
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            text-decoration: none;
+        }
+
+        /* Lien retour accueil */
+        .home-link {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid #e1e5e9;
+        }
+
+        .home-link a {
+            color: #999;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .home-link a:hover {
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .error-body {
+                padding: 25px;
+            }
+            
+            .data-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .error-header h2 {
+                font-size: 24px;
+            }
+            
+            .error-icon {
+                font-size: 50px;
+            }
+        }
+
+        /* Animation pour les icônes */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .error-icon {
+            animation: pulse 2s ease-in-out infinite, shake 0.5s ease-in-out;
+        }
+    

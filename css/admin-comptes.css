@@ -1,0 +1,145 @@
+/* Styles spécifiques à la page de gestion des comptes */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.section-title i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+/* Table stylisée */
+.table {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.thead-dark th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.thead-dark th i {
+    margin-right: 8px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(102, 126, 234, 0.05);
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+    transform: scale(1.01);
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+/* Badges */
+.badge-valide, .badge-statut {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-valide.actif {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.badge-valide.inactif {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.badge-statut.admin {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.badge-statut.responsable {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table td, .table th {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .badge-valide, .badge-statut {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
+/* Bouton de retour */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-back:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(135deg, #5a6268 0%, #4e555b 100%);
+}
+
+.btn-back i {
+    font-size: 0.9rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+
+
+
+@media (max-width: 576px) {
+    .table-responsive {
+        border-radius: 15px;
+    }
+    
+    .table td, .table th {
+        font-size: 0.75rem;
+    }
+}

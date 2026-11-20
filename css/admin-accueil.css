@@ -1,0 +1,212 @@
+/* Styles spécifiques à la page d'administration */
+
+/* Menu de navigation admin */
+.admin-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.admin-nav-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-nav-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.admin-nav-link.logout {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.admin-nav-link.logout:hover {
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* Carte de profil */
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.profile-card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px 25px;
+    color: white;
+}
+
+.profile-card-header i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.profile-card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    display: inline;
+}
+
+.profile-card-body {
+    padding: 25px;
+}
+
+/* Welcome box plus joli */
+.welcome-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.welcome-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.welcome-text h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.welcome-text p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.admin-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.respo-badge {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.welcome-note {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Profile info */
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.info-item label i {
+    color: #667eea;
+    margin-right: 5px;
+    width: 16px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.status-admin {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.status-respo {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-nav-link {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .profile-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .profile-card-header h3 {
+        font-size: 1rem;
+    }
+    
+    .welcome-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .welcome-text p {
+        justify-content: center;
+    }
+}

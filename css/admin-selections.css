@@ -1,0 +1,281 @@
+/* Styles spécifiques à la page de gestion des sélections */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.section-title i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+/* Welcome box */
+.welcome-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 60px;
+    padding: 12px 25px;
+}
+
+.welcome-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.welcome-text h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.welcome-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Formulaires en cartes */
+.form-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.form-card-header i {
+    margin-right: 10px;
+}
+
+.form-card-body {
+    padding: 25px;
+}
+
+.delete-card {
+    border: 1px solid #dc3545;
+}
+
+.delete-header {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+/* Formulaires modernes */
+.form-group-modern {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.form-label i {
+    color: #667eea;
+    margin-right: 8px;
+}
+
+.form-control-modern {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-control-modern:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+select.form-control-modern {
+    cursor: pointer;
+}
+
+/* Boutons */
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-delete {
+    width: 100%;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-delete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* Bouton de retour */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Tableau */
+.table {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.thead-dark th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.thead-dark th i {
+    margin-right: 8px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(102, 126, 234, 0.05);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+/* Badges */
+.badge-valide {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-valide.actif {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.badge-valide.inactif {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.element-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #333;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    margin: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-box {
+        padding: 10px 20px;
+    }
+    
+    .welcome-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .welcome-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .welcome-text h4 {
+        font-size: 1rem;
+    }
+    
+    .table td, .table th {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+}

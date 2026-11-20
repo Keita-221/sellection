@@ -1,0 +1,7 @@
+config/config.php
+*.sql
+*.zip
+*.pdf
+.env
+.DS_Store
+Thumbs.db
