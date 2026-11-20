@@ -122,4 +122,4 @@ La base contient 8 tables, toutes préfixées `t_` et suffixées par un code de 
 
 ## Auteur
 
-Projet universitaire (Licence 2) – [Ton nom]
+Projet universitaire (Licence 2) – Ibrahima Keita
